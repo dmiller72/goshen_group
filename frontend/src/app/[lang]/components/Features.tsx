@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { getStrapiMedia } from '../utils/api-helpers';
 import Image from 'next/image';
-import { useQuery } from 'react-query';
 
 interface FeaturesProps {
   data: {
