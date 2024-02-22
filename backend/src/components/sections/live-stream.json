@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_sections_live_streams",
+  "info": {
+    "displayName": "Live stream",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "videos"]
+    },
+    "slug": {
+      "type": "string"
+    },
+    "schedule": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbarBalloon"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "onair": {
+      "type": "string"
+    },
+    "liveToggle": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_slices_testimonials",
+  "collectionName": "components_slices_givings",
   "info": {
-    "name": "Testimonial",
-    "displayName": "Testimonial",
+    "name": "Giving",
+    "displayName": "Giving",
     "icon": "user-check",
     "description": ""
   },

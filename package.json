@@ -12,6 +12,8 @@
     "repo:upstream": "git fetch upstream && git merge upstream/main"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-markdown-gfm": "^41.1.0",
+    "@sklinet/strapi-plugin-video-field": "^1.0.6",
     "concurrently": "^8.2.2"
   }
 }

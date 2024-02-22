@@ -10,6 +10,9 @@ const populate = {
       picture: {
         fields: ["url", "alternativeText", "caption", "width", "height"],
       },
+      media: {
+        fields: ["url", "alternativeText", "id", "name", "width", "height"],
+      },
       buttons: {
         populate: true,
       },
@@ -17,6 +20,29 @@ const populate = {
         populate: {
           fields: ["title", "description", "showLink", "newTab", "url", "text"],
           media: {
+            fields: ["url", "alternativeText", "caption", "width", "height"],
+          },
+        },
+      },
+      livestream: {
+        populate: {
+          fields: ["title", "onair", "schedule", "liveToggle", "slug"],
+          // media: {
+          //   fields: ["url", "alternativeText", "id", "name", "width", "height"],
+          // },
+        },
+      },
+      donations: {
+        populate: {
+          fields: [
+            "heading",
+            "subheading",
+            "instructions",
+            "newTab",
+            "url",
+            "text",
+          ],
+          logo: {
             fields: ["url", "alternativeText", "caption", "width", "height"],
           },
         },
@@ -39,7 +65,7 @@ const populate = {
   seo: {
     fields: ["metaTitle", "metaDescription"],
     populate: { shareImage: true },
-  }
+  },
 };
 
 module.exports = (config, { strapi }) => {

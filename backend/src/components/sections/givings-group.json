@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_slices_testimonials_group",
+  "collectionName": "components_slices_givings_group",
   "info": {
-    "name": "TestimonialsGroup",
-    "displayName": "Testimonials group",
+    "name": "GivingsGroup",
+    "displayName": "Givings group",
     "icon": "user-friends",
     "description": ""
   },
@@ -14,10 +14,10 @@
     "description": {
       "type": "text"
     },
-    "testimonials": {
+    "givings": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.testimonial"
+      "component": "elements.giving"
     },
     "video": {
       "type": "customField",

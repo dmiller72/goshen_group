@@ -10,11 +10,14 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^2.1.0",
+    "@sklinet/strapi-plugin-video-field": "^1.0.6",
     "@strapi/plugin-i18n": "4.12.5",
     "@strapi/plugin-seo": "^1.8.0",
     "@strapi/plugin-users-permissions": "4.12.5",
     "@strapi/strapi": "4.12.5",
-    "better-sqlite3": "8.7.0"
+    "better-sqlite3": "8.7.0",
+    "strapi-plugin-ezforms": "^0.1.7"
   },
   "author": {
     "name": "A Strapi developer"

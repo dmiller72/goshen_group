@@ -17,6 +17,11 @@
       "type": "component",
       "repeatable": true,
       "component": "elements.feature"
+    },
+    "video": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.video-embed"
     }
   }
 }

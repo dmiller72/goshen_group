@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { getStrapiMedia } from '../utils/api-helpers';
 import HighlightedText from './HighlightedText';
 
-interface Testimonial {
+interface Giving {
   text: string;
   firstname: string;
   lastname: string;
@@ -21,23 +21,16 @@ interface Testimonial {
   };
 }
 
-interface TestimonialsProps {
+interface GivingsProps {
   data: {
     id: string;
     title: string;
     description: string;
-    testimonials: Testimonial[];
+    givings: Giving[];
   };
 }
 
-function Testimonial({
-  text,
-  picture,
-  url,
-  firstname,
-  lastname,
-  email,
-}: Testimonial) {
+function Giving({ text, picture, url, firstname, lastname, email }: Giving) {
   const imageUrl = getStrapiMedia(picture.data.attributes.url);
   return (
     <div className='flex flex-col items-center mx-12 lg:mx-0' id='giving'>
@@ -95,8 +88,8 @@ function Testimonial({
   );
 }
 
-export default function Testimonials({ data }: TestimonialsProps) {
-  console.log(`Testimonials title: ${data.title}`);
+export default function Givings({ data }: GivingsProps) {
+  console.log(`  Givings data: ${data.givings}`);
   return (
     <section className=' dark:text-gray-700  m:py-8 lg:py-12'>
       <div className='container mx-auto py-4 space-y-2 text-center'>
@@ -104,8 +97,8 @@ export default function Testimonials({ data }: TestimonialsProps) {
         <p className='mt-2 text-xl text-center'>{data.description}</p>
       </div>
       <div className='container mx-auto grid grid-cols-1 gap-8 lg:gap-20 md:px-10 md:pb-10 lg:grid-cols-2'>
-        {data.testimonials.map((testimonial: Testimonial, index: number) => (
-          <Testimonial key={index} {...testimonial} />
+        {data.givings.map((giving: Giving, index: number) => (
+          <Giving key={index} {...giving} />
         ))}
       </div>
     </section>

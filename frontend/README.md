@@ -36,3 +36,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Steps to Create New Component / Content-Type in Strapi
+
+1. Go to Content Type Builder -> Components -> Create New Component
+2. Name it and choose "Sections" category
+3. Select Fields to include in new component
+4. From Content Type Builder menu Go to Collection Type/Page you're adding the component to
+5. From Content Type Builder Go to Components -> "Sections" -> (Page to link component to).
+6. Hit Add Component, select existing component you just created.
+7. Add component to Page
+8. Go to code inside Front End folder -> SRC -> App -> Components and create new component file.
+9. Create an interface for newly create fields within the component
+10. Your function to access and render those fields
+11. Go to "Backend " folder -> "SRC -> API -> PAGE -> Content TYpes/Page -> schema.json. FInd sections.[component name] to use in next step.
+12. Front End -> SRC -> App -> Components -> Utils and modify "section-renderer"
+13. Add component to section

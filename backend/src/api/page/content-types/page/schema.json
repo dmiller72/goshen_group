@@ -33,12 +33,17 @@
         "sections.feature-columns-group",
         "sections.feature-rows-group",
         "sections.testimonials-group",
-        "sections.large-video",
+        "sections.givings-group",
         "sections.rich-text",
         "sections.pricing",
         "sections.lead-form",
         "sections.features",
-        "sections.heading"
+        "sections.heading",
+        "sections.live-stream",
+        "sections.carousel",
+        "sections.custom-rich-text",
+        "shared.video-embed",
+        "sections.donations-group"
       ],
       "pluginOptions": {
         "i18n": {
