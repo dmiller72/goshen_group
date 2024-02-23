@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { getStrapiMedia } from '../utils/api-helpers';
-import { Markdown } from '@ckeditor/ckeditor5-markdown-gfm';
 
 interface Feature {
   id: string;

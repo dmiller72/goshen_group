@@ -6,7 +6,6 @@ import Pricing from '../components/Pricing';
 import Email from '../components/Email';
 import LiveStream from '../components/LiveStream';
 import CustomRichText from '../components/CustomRichText';
-import Carousel from '/nextjs-image-gallery/components/Carousel';
 export function sectionRenderer(section: any, index: number) {
   switch (section.__component) {
     case 'sections.hero':
