@@ -6,7 +6,6 @@ interface FeaturesProps {
   data: {
     heading: string;
     description: string;
-
     feature: Feature[];
   };
 }

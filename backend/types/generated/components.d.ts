@@ -153,6 +153,18 @@ export interface ElementsPlan extends Schema.Component {
   };
 }
 
+export interface ElementsSocial extends Schema.Component {
+  collectionName: 'components_elements_socials';
+  info: {
+    displayName: 'social';
+    description: '';
+  };
+  attributes: {
+    url: Attribute.String;
+    media: Attribute.Media;
+  };
+}
+
 export interface ElementsTestimonial extends Schema.Component {
   collectionName: 'components_slices_testimonials';
   info: {
@@ -509,6 +521,34 @@ export interface SectionsRichText extends Schema.Component {
   };
 }
 
+export interface SectionsSocialMedia extends Schema.Component {
+  collectionName: 'components_sections_social_medias';
+  info: {
+    displayName: 'Social Media';
+    description: '';
+  };
+  attributes: {
+    social: Attribute.Component<'elements.social', true>;
+    text: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'toolbarBalloon';
+        }
+      >;
+  };
+}
+
+export interface SectionsSocial extends Schema.Component {
+  collectionName: 'components_sections_socials';
+  info: {
+    displayName: 'Social';
+  };
+  attributes: {
+    delete: Attribute.String;
+  };
+}
+
 export interface SectionsTestimonialsGroup extends Schema.Component {
   collectionName: 'components_slices_testimonials_group';
   info: {
@@ -613,6 +653,7 @@ declare module '@strapi/types' {
       'elements.logos': ElementsLogos;
       'elements.notification-banner': ElementsNotificationBanner;
       'elements.plan': ElementsPlan;
+      'elements.social': ElementsSocial;
       'elements.testimonial': ElementsTestimonial;
       'layout.footer': LayoutFooter;
       'layout.logo': LayoutLogo;
@@ -637,6 +678,8 @@ declare module '@strapi/types' {
       'sections.live-stream': SectionsLiveStream;
       'sections.pricing': SectionsPricing;
       'sections.rich-text': SectionsRichText;
+      'sections.social-media': SectionsSocialMedia;
+      'sections.social': SectionsSocial;
       'sections.testimonials-group': SectionsTestimonialsGroup;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;

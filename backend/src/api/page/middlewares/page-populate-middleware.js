@@ -24,6 +24,19 @@ const populate = {
           },
         },
       },
+      social: {
+        populate: {
+          fields: "url",
+          media: {
+            fields: ["url", "alternativeText", "caption", "width", "height"],
+          },
+        },
+      },
+      form: {
+        populate: {
+          fields: ["name", "email", "message"],
+        },
+      },
       livestream: {
         populate: {
           fields: ["title", "onair", "schedule", "liveToggle", "slug"],

@@ -43,7 +43,9 @@
         "sections.carousel",
         "sections.custom-rich-text",
         "shared.video-embed",
-        "sections.donations-group"
+        "sections.donations-group",
+        "sections.social-media",
+        "sections.social"
       ],
       "pluginOptions": {
         "i18n": {

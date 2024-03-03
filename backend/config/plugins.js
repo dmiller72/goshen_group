@@ -2,21 +2,16 @@ module.exports = ({ env }) => ({
   seo: {
     enabled: true,
   },
-  ezforms: {
+  email: {
     config: {
-      captchaProvider: {
-        name: "none",
+      provider: "sendgrid",
+      providerOptions: {
+        apiKey: env("SENDGRID_API_KEY"),
       },
-      notificationProviders: [
-        {
-          name: "email",
-          enabled: true,
-          config: {
-            subject: "Test Subject", // Optional
-            from: "mtech.websites@gmail.com", // Required
-          },
-        },
-      ],
+      settings: {
+        defaultFrom: "mtech.websites@gmail.com",
+        defaultReplyTo: "mtech.websites@gmail.com",
+      },
     },
   },
 });

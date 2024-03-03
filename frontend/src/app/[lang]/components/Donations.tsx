@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { getStrapiMedia } from '../utils/api-helpers';
-import HighlightedText from './HighlightedText';
 
 interface DonationsProps {
   data: {
@@ -15,16 +14,6 @@ interface Donations {
   instructions: string;
   url: string;
   logo: Logo;
-  // logo: {
-  //   data: {
-  //     id: string;
-  //     attributes: {
-  //       name: string;
-  //       alternativeText: string;
-  //       url: string;
-  //     };
-  //   };
-  // };
 }
 
 interface Logo {
@@ -60,24 +49,6 @@ function Donate({ logo, url, instructions }: Donations) {
               />
             </div>
           </a>
-          {/* <HighlightedText
-              text={firstname ? firstname : ''}
-              tag='div'
-              className='text-5xl font-bold leading-none sm:text-6xl  lg:text-2xl text-black'
-              color='dark:text-violet-900'
-            />
-            <HighlightedText
-              text={lastname ? lastname : ''}
-              tag='div'
-              className='text-5xl font-bold leading-none sm:text-6xl lg:text-2xl text-black'
-              color='dark:text-violet-900'
-            />
-            <HighlightedText
-              text={email ? email : ''}
-              tag='div'
-              className='text-5xl font-bold leading-none sm:text-6xl mb-8 lg:text-2xl text-black'
-              color='dark:text-violet-900'
-            /> */}
         </div>
       </div>
 

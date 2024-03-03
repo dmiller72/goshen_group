@@ -6,6 +6,7 @@ import Pricing from '../components/Pricing';
 import Email from '../components/Email';
 import LiveStream from '../components/LiveStream';
 import CustomRichText from '../components/CustomRichText';
+import SocialMedia from '../components/SocialMedia';
 export function sectionRenderer(section: any, index: number) {
   switch (section.__component) {
     case 'sections.hero':
@@ -24,6 +25,8 @@ export function sectionRenderer(section: any, index: number) {
       return <CustomRichText key={index} data={section} />;
     case 'sections.lead-form':
       return <Email key={index} data={section} />;
+    case 'sections.social-media':
+      return <SocialMedia key={index} data={section} />;
     // case 'sections.carousel':
     //   return <Carousel key={index} data={section} />;
     default:

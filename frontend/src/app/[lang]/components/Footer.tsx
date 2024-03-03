@@ -113,10 +113,13 @@ export default function Footer({
             {/* <div className='xl:col-span-1 xl:justify-self-center sm:grid-span-2 md:text-left sm:justify-self-center'> */}
             <Logo src={logoUrl} />
           </div>
-          <div className='xl:flex xl:items-center'>
+          <div className='xl:flex'>
             {/* <div className='col-span-2 sm:col-span-1 flex flex-col sm:flex-row xl:justify-between sm:justify-center items-center'> */}
-            <ul className='xl:flex xl:space-x-4'>
-              <h2 className='text-2xl font-bold mb-2'>Site Map</h2>
+            <ul className='xl:flex xl:space-x-4 xl:items-center'>
+              <li>
+                {' '}
+                <h2 className='text-2xl font-bold mb-2'>Site Map</h2>
+              </li>
               {/* <ul className='flex flex-wrap space-x-4 sm:space-x-4 sm:space-y-0 xl:justify-center'> */}
               {menuLinks.map((link: FooterLink) => (
                 <FooterLink key={link.id} {...link} />
@@ -142,7 +145,7 @@ export default function Footer({
               ))}
             </ul>
           </div>
-          <div className='flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13'>
+          {/* <div className='flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13'>
             {socialLinks.map((link: FooterLink) => {
               return (
                 <a
@@ -157,7 +160,7 @@ export default function Footer({
                 </a>
               );
             })}
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

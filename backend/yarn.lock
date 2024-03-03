@@ -1847,6 +1847,29 @@
     argparse "~1.0.9"
     string-argv "~0.3.1"
 
+"@sendgrid/client@^7.7.0":
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/@sendgrid/client/-/client-7.7.0.tgz#f8f67abd604205a0d0b1af091b61517ef465fdbf"
+  integrity sha512-SxH+y8jeAQSnDavrTD0uGDXYIIkFylCo+eDofVmZLQ0f862nnqbC3Vd1ej6b7Le7lboyzQF6F7Fodv02rYspuA==
+  dependencies:
+    "@sendgrid/helpers" "^7.7.0"
+    axios "^0.26.0"
+
+"@sendgrid/helpers@^7.7.0":
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/@sendgrid/helpers/-/helpers-7.7.0.tgz#93fb4b6e2f0dc65080440d6a784cc93e8e148757"
+  integrity sha512-3AsAxfN3GDBcXoZ/y1mzAAbKzTtUZ5+ZrHOmWQ279AuaFXUNCh9bPnRpN504bgveTqoW+11IzPg3I0WVgDINpw==
+  dependencies:
+    deepmerge "^4.2.2"
+
+"@sendgrid/mail@7.7.0":
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/@sendgrid/mail/-/mail-7.7.0.tgz#aba09f5ce2e9d8ceee92284c3ea8b4a90b0e38fe"
+  integrity sha512-5+nApPE9wINBvHSUxwOxkkQqM/IAAaBYoP9hw7WwgDNQPxraruVqHizeTitVtKGiqWCKm2mnjh4XGN3fvFLqaw==
+  dependencies:
+    "@sendgrid/client" "^7.7.0"
+    "@sendgrid/helpers" "^7.7.0"
+
 "@sentry/core@6.19.7":
   version "6.19.7"
   resolved "https://registry.yarnpkg.com/@sentry/core/-/core-6.19.7.tgz#156aaa56dd7fad8c89c145be6ad7a4f7209f9785"
@@ -2382,6 +2405,14 @@
   resolved "https://registry.yarnpkg.com/@strapi/provider-audit-logs-local/-/provider-audit-logs-local-4.20.2.tgz#16779a1b68bcee616ce0523525d03270a1588e1e"
   integrity sha512-RTtL0xnbj88+HI9DGahol/8tVKG2Qm/DG/UpMKw5og4R7OnKXYekd9J4NZrHLEnjuUH5y2C8yfw+NqZdS2CJNA==
 
+"@strapi/provider-email-sendgrid@^4.20.3":
+  version "4.20.3"
+  resolved "https://registry.yarnpkg.com/@strapi/provider-email-sendgrid/-/provider-email-sendgrid-4.20.3.tgz#34fe14a170f42b3bc74bfcb8d2820d9b8e63a9db"
+  integrity sha512-zPdPzX+V848YStaVn1ImbyJ2nubnh+BKfCBOQ7DybnxhQ4dDTcKKWQRbW1FfjT09YhbheoWe/HBgZcVmjBzOCA==
+  dependencies:
+    "@sendgrid/mail" "7.7.0"
+    "@strapi/utils" "4.20.3"
+
 "@strapi/provider-email-sendmail@4.20.2":
   version "4.20.2"
   resolved "https://registry.yarnpkg.com/@strapi/provider-email-sendmail/-/provider-email-sendmail-4.20.2.tgz#e9736d7a1d4233783dc6bcac7e5c0c97dc8c20ef"
@@ -2530,6 +2561,18 @@
   version "4.20.2"
   resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.20.2.tgz#68edebab5d3e3034b6c3a7d57afc79564ffdb276"
   integrity sha512-+5AbCF21cJ+p97N+yBMzpsWtObjpflDd6On8ISdarA/gc5Y//9gE/Os4fbj+hB6EwuUylDmPor51xE4FPLW2Cw==
+  dependencies:
+    "@sindresorhus/slugify" "1.1.0"
+    date-fns "2.30.0"
+    http-errors "1.8.1"
+    lodash "4.17.21"
+    p-map "4.0.0"
+    yup "0.32.9"
+
+"@strapi/utils@4.20.3":
+  version "4.20.3"
+  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.20.3.tgz#8c404ed3863a743b87d8780907f9e80846b31f08"
+  integrity sha512-4m4IvZmFxlRdSl1ThfOP0Tklf97A+FbzTmA9RyqrF8stVZNi/8OIneJQnLqZahmVcp+2iYqKDZA+X5mGvK8faw==
   dependencies:
     "@sindresorhus/slugify" "1.1.0"
     date-fns "2.30.0"
@@ -3271,6 +3314,13 @@ axios@^0.24.0:
   integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
   dependencies:
     follow-redirects "^1.14.4"
+
+axios@^0.26.0:
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.1.tgz#1ede41c51fcf51bbbd6fd43669caaa4f0495aaa9"
+  integrity sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==
+  dependencies:
+    follow-redirects "^1.14.8"
 
 b4a@^1.6.4:
   version "1.6.6"
@@ -5162,7 +5212,7 @@ fn.name@1.x.x:
   resolved "https://registry.yarnpkg.com/fn.name/-/fn.name-1.1.0.tgz#26cad8017967aea8731bc42961d04a3d5988accc"
   integrity sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==
 
-follow-redirects@^1.14.4, follow-redirects@^1.15.0, follow-redirects@^1.15.4:
+follow-redirects@^1.14.4, follow-redirects@^1.14.8, follow-redirects@^1.15.0, follow-redirects@^1.15.4:
   version "1.15.5"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.5.tgz#54d4d6d062c0fa7d9d17feb008461550e3ba8020"
   integrity sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==
