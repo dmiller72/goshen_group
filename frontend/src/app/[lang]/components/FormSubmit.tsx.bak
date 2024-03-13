@@ -12,7 +12,8 @@ export default function FormSubmit({
   const [email, setEmail] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const token = process.env.NEXT_PUBLIC_STRAPI_FORM_SUBMISSION_TOKEN;
+  // const token = process.env.NEXT_PUBLIC_STRAPI_FORM_SUBMISSION_TOKEN;
+  // const token = process.env.SENDGRID_API_KEY;
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -27,11 +28,11 @@ export default function FormSubmit({
       return;
     }
 
-    const res = await fetch(getStrapiURL() + '/api/sendgrid/submit', {
+    const res = await fetch('/api/mail', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
+        // Authorization: `Bearer ${token}`,
       },
 
       body: JSON.stringify({
@@ -39,7 +40,7 @@ export default function FormSubmit({
           formData: {
             name: 'John Doe',
             email: 'test@gmail.com',
-            message: 'Hello World',
+            message: 'For testing purposes',
           },
         },
       }),

@@ -20,9 +20,11 @@ export default async function handler(
       to: 'mtech.websites@gmail.com',
       from: 'yoursendgridemail@test.com',
       subject: `${name.toUpperCase()} sent you a message from Contact Form`,
+
       text: `Email => ${email}`,
       html: msg.replace(/\r\n/g, '<br>'),
     };
+
     try {
       await sgMail.send(data);
       res.status(200).json({ message: 'Your message was sent successfully.' });

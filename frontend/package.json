@@ -12,6 +12,8 @@
     "@formatjs/intl-localematcher": "^0.4.2",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
+    "@react-email/components": "^0.0.15",
+    "@sendgrid/mail": "^8.1.1",
     "@types/negotiator": "^0.6.2",
     "@types/node": "20.8.9",
     "@types/qs": "^6.9.9",
@@ -27,6 +29,7 @@
     "react-markdown": "^9.0.0",
     "react-slideshow-image": "^4.3.0",
     "remark-gfm": "^4.0.0",
+    "resend": "^3.2.0",
     "typescript": "5.2.2"
   },
   "devDependencies": {

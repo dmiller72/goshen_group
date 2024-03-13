@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2020",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -34,7 +34,13 @@
     "src/app/[lang]/components/ErrorBoundary.tsx",
     "src/app/global-error.tsx",
     "src/app/[lang]/components/SendGrid.js",
-    "src/app/[lang]/components/FormSubmit.tsx"
+    "src/app/[lang]/components/FormSubmit.js.bak",
+    "src/app/api/mail/mail.tsx",
+    "src/api/mail/mail.js",
+    "src/app/[lang]/components/api/mail/route.js",
+    "src/app/[lang]/api/mail/route.js",
+    "src/app/[lang]/api/route.js",
+    "src/app/[lang]/components/EmailOld.js"
   ],
   "exclude": ["node_modules"]
 }

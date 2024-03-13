@@ -3,7 +3,7 @@ import Features from '../components/Features';
 import Testimonials from '../components/Testimonials';
 import Donations from '../components/Donations';
 import Pricing from '../components/Pricing';
-import Email from '../components/Email';
+import { Email } from '../components/Email';
 import LiveStream from '../components/LiveStream';
 import CustomRichText from '../components/CustomRichText';
 import SocialMedia from '../components/SocialMedia';
@@ -23,7 +23,7 @@ export function sectionRenderer(section: any, index: number) {
       return <LiveStream key={index} data={section} />;
     case 'sections.custom-rich-text':
       return <CustomRichText key={index} data={section} />;
-    case 'sections.lead-form':
+    case 'sections.email':
       return <Email key={index} data={section} />;
     case 'sections.social-media':
       return <SocialMedia key={index} data={section} />;
