@@ -51,7 +51,7 @@ export default function Leadership({ data }: LeadershipProps) {
       <div className='container mx-auto space-y-2 text-center '>
         <h2 className='text-5xl font-bold text-white'>{data.heading}</h2>
       </div>
-      <div className='container mx-auto my-6 grid grid-cols-[repeat(auto-fit,minmax(200px,max-content))] justify-center gap-8 '>
+      <div className='container mx-auto my-6 grid grid-cols-[repeat(auto-fit,minmax(400px,max-content))] justify-center gap-8 '>
         {data.leader.map((leader: Leader, index: number) => (
           <Leader key={index} {...leader} />
         ))}

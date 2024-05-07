@@ -52,7 +52,7 @@ export default function Hero({ data }: HeroProps) {
             tag='h1'
             className={
               data.title === 'ABOUT US'
-                ? 'text-5xl font-bold leading-none sm:text-6xl mb-8 text-yellow-300'
+                ? 'text-5xl font-bold leading-none sm:text-6xl mb-8 text-white'
                 : 'text-5xl font-bold leading-none sm:text-6xl mb-8 text-violet-100'
             }
             color='dark:text-violet-900'
