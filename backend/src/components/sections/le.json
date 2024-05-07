@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_sections_le_s",
+  "info": {
+    "displayName": "Le "
+  },
+  "options": {},
+  "attributes": {
+    "remove": {
+      "type": "string"
+    }
+  }
+}

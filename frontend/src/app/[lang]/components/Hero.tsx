@@ -31,7 +31,6 @@ interface HeroProps {
 }
 
 export default function Hero({ data }: HeroProps) {
-  console.log(data.title);
   const imgUrl = getStrapiMedia(data.picture.data.attributes.url);
 
   const style = {
@@ -52,8 +51,8 @@ export default function Hero({ data }: HeroProps) {
             text={data.title}
             tag='h1'
             className={
-              data.title === 'About Us'
-                ? 'text-5xl font-bold leading-none sm:text-6xl mb-8 text-amber-300'
+              data.title === 'ABOUT US'
+                ? 'text-5xl font-bold leading-none sm:text-6xl mb-8 text-yellow-300'
                 : 'text-5xl font-bold leading-none sm:text-6xl mb-8 text-violet-100'
             }
             color='dark:text-violet-900'

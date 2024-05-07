@@ -45,6 +45,19 @@ const populate = {
           // },
         },
       },
+      belief: {
+        populate: {
+          fields: ["text", "description"],
+        },
+      },
+      leader: {
+        populate: {
+          fields: ["name", "description"],
+          media: {
+            fields: ["url", "alternativeText", "caption", "width", "height"],
+          },
+        },
+      },
       donations: {
         populate: {
           fields: [

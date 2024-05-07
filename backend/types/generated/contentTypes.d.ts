@@ -933,7 +933,9 @@ export interface ApiArticleArticle extends Schema.CollectionType {
         'shared.quote',
         'shared.rich-text',
         'shared.slider',
-        'shared.video-embed'
+        'shared.video-embed',
+        'sections.leadership',
+        'sections.le'
       ]
     >;
     authorsBio: Attribute.Relation<
@@ -1186,7 +1188,10 @@ export interface ApiPagePage extends Schema.CollectionType {
         'shared.video-embed',
         'sections.donations-group',
         'sections.social-media',
-        'sections.social'
+        'sections.social',
+        'sections.leadership',
+        'elements.belief',
+        'sections.beliefs'
       ]
     > &
       Attribute.SetPluginOptions<{

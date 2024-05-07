@@ -46,7 +46,7 @@ function Feature({
     <div className='grid text-center'>
       <h3 className='my-3 text-3xl font-semibold'>{title}</h3>
       <a href={url} target='_blank'>
-        <div className='cursor-pointer flex flex-col items-center text-center relative max-w-s overflow-hidden rounded-2xl shadow-lg group'>
+        <div className='cursor-pointer grid grid-cols-[repeat(auto-fit,minmax(100px,max-content))] gap-1 items-center text-center relative max-w-s overflow-hidden rounded-2xl shadow-lg group'>
           <Image
             src={imgUrl || ''}
             alt={media.data.attributes.alternativeText || 'none provided'}
