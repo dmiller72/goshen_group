@@ -553,6 +553,16 @@ export interface SectionsLiveStream extends Schema.Component {
   };
 }
 
+export interface SectionsMedia extends Schema.Component {
+  collectionName: 'components_sections_media';
+  info: {
+    displayName: 'media';
+  };
+  attributes: {
+    store: Attribute.Media;
+  };
+}
+
 export interface SectionsPricing extends Schema.Component {
   collectionName: 'components_sections_pricings';
   info: {
@@ -564,7 +574,7 @@ export interface SectionsPricing extends Schema.Component {
   attributes: {
     title: Attribute.String;
     plans: Attribute.Component<'elements.plan', true>;
-    zoom: Attribute.Media;
+    media: Attribute.Media;
   };
 }
 
@@ -605,6 +615,16 @@ export interface SectionsSocial extends Schema.Component {
   };
   attributes: {
     delete: Attribute.String;
+  };
+}
+
+export interface SectionsStore extends Schema.Component {
+  collectionName: 'components_sections_stores';
+  info: {
+    displayName: 'store';
+  };
+  attributes: {
+    store: Attribute.Media;
   };
 }
 
@@ -740,10 +760,12 @@ declare module '@strapi/types' {
       'sections.lead-form': SectionsLeadForm;
       'sections.leadership': SectionsLeadership;
       'sections.live-stream': SectionsLiveStream;
+      'sections.media': SectionsMedia;
       'sections.pricing': SectionsPricing;
       'sections.rich-text': SectionsRichText;
       'sections.social-media': SectionsSocialMedia;
       'sections.social': SectionsSocial;
+      'sections.store': SectionsStore;
       'sections.testimonials-group': SectionsTestimonialsGroup;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;

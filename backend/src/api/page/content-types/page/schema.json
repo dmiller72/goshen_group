@@ -48,7 +48,9 @@
         "sections.social",
         "sections.leadership",
         "elements.belief",
-        "sections.beliefs"
+        "sections.beliefs",
+        "sections.media",
+        "shared.media"
       ],
       "pluginOptions": {
         "i18n": {

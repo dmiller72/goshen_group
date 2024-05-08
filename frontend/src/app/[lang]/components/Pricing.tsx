@@ -24,12 +24,12 @@ interface PriceProps {
   data: {
     id: string;
     title: string;
-    zoom: Zoom;
+    media: Media;
     plans: Plan[];
   };
 }
 
-interface Zoom {
+interface Media {
   data: {
     id: string;
     attributes: {
@@ -42,15 +42,15 @@ interface Zoom {
 
 export default function Pricing({ data }: PriceProps) {
   // console.log(data.media);
-  const imgUrl = getStrapiMedia(data.zoom?.data.attributes.url);
+  const imgUrl = getStrapiMedia(data.media.data.attributes.url);
   return (
     <section className='py-20 bg-violet-950 dark:text-gray-100 m:py-12 '>
       <div className='container px-4 mx-auto '>
         <div className='max-w-2xl mx-auto mb-16 text-center'>
           <h2 className='text-4xl font-bold lg:text-5xl'>{data.title}</h2>
         </div>
-        <div>
-          <Image src={imgUrl || ''} alt='' />
+        <div className='flex justify-center'>
+          <Image src={imgUrl || ''} alt='' width={1000} height={1000} />
         </div>
         <div className='flex justify-center'></div>
       </div>

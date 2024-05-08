@@ -16,6 +16,9 @@ const populate = {
       buttons: {
         populate: true,
       },
+      file: {
+        fields: ["url", "alternativeText", "id", "name", "width", "height"],
+      },
       feature: {
         populate: {
           fields: ["title", "description", "showLink", "newTab", "url", "text"],
@@ -58,6 +61,7 @@ const populate = {
           },
         },
       },
+
       donations: {
         populate: {
           fields: [
@@ -77,6 +81,13 @@ const populate = {
         populate: {
           picture: {
             fields: ["url", "alternativeText", "caption", "width", "height"],
+          },
+        },
+      },
+      pricing: {
+        populate: {
+          zoom: {
+            fields: ["url", "alternativeText", "id", "name", "width", "height"],
           },
         },
       },

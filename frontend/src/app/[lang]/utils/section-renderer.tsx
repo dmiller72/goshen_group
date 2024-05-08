@@ -9,6 +9,7 @@ import CustomRichText from '../components/CustomRichText';
 import SocialMedia from '../components/SocialMedia';
 import Leadership from '../components/Leadership';
 import Beliefs from '../components/Beliefs';
+import Media from '../components/Media';
 export function sectionRenderer(section: any, index: number) {
   switch (section.__component) {
     case 'sections.hero':
@@ -33,6 +34,8 @@ export function sectionRenderer(section: any, index: number) {
       return <Leadership key={index} data={section} />;
     case 'sections.beliefs':
       return <Beliefs key={index} data={section} />;
+    case 'sections.media':
+      return <Media key={index} data={section} />;
     // case 'sections.carousel':
     //   return <Carousel key={index} data={section} />;
     default:

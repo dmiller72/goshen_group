@@ -79,7 +79,7 @@ export default async function RootLayout({
   );
 
   return (
-    <html lang={params.lang}>
+    <html lang={params.lang} className='scroll-smooth'>
       <body>
         <Navbar
           links={navbar.links}
