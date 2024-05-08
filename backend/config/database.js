@@ -18,7 +18,7 @@ module.exports = ({ env }) => ({
       port: env.int("DATABASE_PORT", 5432),
       database: env("DATABASE_NAME", DATABASE_NAME),
       user: env("DATABASE_USERNAME", DATABASE_USERNAME),
-      password: env("DATABASE_PASSWORD"),
+      password: env("DATABASE_PASSWORD", DATABASE_PASSWORD),
     },
     useNullAsDefault: true,
   },
