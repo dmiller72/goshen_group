@@ -395,6 +395,25 @@ export interface SectionsDonationsGroup extends Schema.Component {
   };
 }
 
+export interface SectionsEmail extends Schema.Component {
+  collectionName: 'components_sections_emails';
+  info: {
+    displayName: 'email';
+    icon: 'envelop';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.String;
+    name: Attribute.String;
+    namePlaceHolder: Attribute.String;
+    email: Attribute.String;
+    emailPlaceHolder: Attribute.String;
+    message: Attribute.Text;
+    messagePlaceHolder: Attribute.String;
+    buttonText: Attribute.String;
+  };
+}
+
 export interface SectionsFeatureColumnsGroup extends Schema.Component {
   collectionName: 'components_slices_feature_columns_groups';
   info: {
@@ -749,6 +768,7 @@ declare module '@strapi/types' {
       'sections.carousel': SectionsCarousel;
       'sections.custom-rich-text': SectionsCustomRichText;
       'sections.donations-group': SectionsDonationsGroup;
+      'sections.email': SectionsEmail;
       'sections.feature-columns-group': SectionsFeatureColumnsGroup;
       'sections.feature-rows-group': SectionsFeatureRowsGroup;
       'sections.features': SectionsFeatures;

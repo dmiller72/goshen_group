@@ -1194,7 +1194,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'elements.belief',
         'sections.beliefs',
         'sections.media',
-        'shared.media'
+        'shared.media',
+        'sections.email'
       ]
     > &
       Attribute.SetPluginOptions<{

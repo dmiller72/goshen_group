@@ -50,7 +50,8 @@
         "elements.belief",
         "sections.beliefs",
         "sections.media",
-        "shared.media"
+        "shared.media",
+        "sections.email"
       ],
       "pluginOptions": {
         "i18n": {

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { getStrapiMedia } from '../utils/api-helpers';
+import { FaFacebook } from 'react-icons/fa6';
 
 interface SocialMediaProps {
   data: {
