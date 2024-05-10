@@ -77,7 +77,7 @@ const LiveStream = ({ data }: LiveProps) => {
             {data.title}
           </h1>
 
-          <div className='grid lg:grid-cols-2 lg:items-center md:grid-cols-1 '>
+          <div className='grid lg:grid-cols-2 lg:items-center  md:grid-cols-1 '>
             <Link
               href='https://zoom.us/j/96666326977?from=join#success'
               className='flex justify-center'
@@ -85,7 +85,7 @@ const LiveStream = ({ data }: LiveProps) => {
               <Image src={imgUrl || ''} alt='' width={350} height={350} />
             </Link>
             <div
-              className='font-bold md:mt-4 ml-10'
+              className='mt-10 xl:mt-0 font-bold mb-4 lg:ml-10'
               dangerouslySetInnerHTML={{ __html: data.schedule }}
             />
           </div>

@@ -41,10 +41,9 @@ export default function Hero({ data }: HeroProps) {
 
   return (
     <section>
-      {/* <div style={{ backgroundImage: `url(${imgUrl})`,  }}> */}
       <div
         style={{ backgroundImage: `url(${style.backgroundImage})` }}
-        className='grid items-center justify-center text-center xl:py-20 xl:bg-cover bg-[center_top_-5rem] bg:no-repeat '
+        className={`grid items-center justify-center text-center py-20 bg-slate-500  xl:bg-cover bg-[center_top_-3rem] bg:no-repeat `}
       >
         <div>
           <HighlightedText
@@ -53,7 +52,7 @@ export default function Hero({ data }: HeroProps) {
             className={
               data.title === 'ABOUT US'
                 ? 'text-5xl font-bold leading-none sm:text-6xl mb-8 text-white'
-                : 'text-5xl font-bold leading-none sm:text-6xl mb-8 text-violet-100'
+                : 'text-5xl font-bold leading-none mb-8 lg:mb-4 text-violet-100 bg-zinc-400/50 p-4 md:text-8xl lg:text-7xl xl:bg-transparent'
             }
             color='dark:text-violet-900'
           />
@@ -61,7 +60,7 @@ export default function Hero({ data }: HeroProps) {
           <HighlightedText
             text={data.description}
             tag='p'
-            className='mb-8 text-lg sm:mb-12 text-white font-semibold '
+            className='mb-8 text-lg lg:text-xl  text-white font-semibold '
             color='dark:text-violet-400'
           />
           {/* <div className='flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-center'>
